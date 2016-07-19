@@ -203,6 +203,12 @@ app.loadingMenuWork = function() {
 		// Failure
 
 		this.loadingTextElement.innerHTML = "Failed to load audio.";
+
+		app.loadingMenuLoop.stopCallback = function() {
+			console.log("Failed to load audio.");
+		};
+
+		app.loadingMenuLoop.stop();
 	}
 	else if (this.audioLoadSuccesses === this.totalAudioLoopers) {
 		// Success
