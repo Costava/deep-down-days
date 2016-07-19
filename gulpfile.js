@@ -50,38 +50,38 @@ gulp.task('move-audio', function() {
 
 gulp.task('build-css', function() {
 	return new Promise(function(resolve, reject) {
-			fs.readFile('./src/styles/style.css', 'utf-8', function(err, css) {
-				if (err) reject(err);
+		fs.readFile('./src/styles/style.css', 'utf-8', function(err, css) {
+			if (err) reject(err);
 
-				resolve(css);
-			});
-		})
-		.then(function(css) {
-			var processor = postcss([
-				require('postcss-advanced-variables'),
-				require('cssnano')
-			]);
+			resolve(css);
+		});
+	})
+	.then(function(css) {
+		var processor = postcss([
+			require('postcss-advanced-variables'),
+			require('cssnano')
+		]);
 
-			return processor.process(css);
-		})
-		.then(function(result) {
-			return new Promise(function(resolve, reject) {
-				fs.mkdir('./dist/styles', function(exception) {
-					if (exception) reject(exception);
+		return processor.process(css);
+	})
+	.then(function(result) {
+		return new Promise(function(resolve, reject) {
+			fs.mkdir('./dist/styles', function(exception) {
+				if (exception) reject(exception);
 
-					resolve(result);
-				});
-			});
-		})
-		.then(function(result) {
-			return new Promise(function(resolve, reject) {
-				fs.writeFile('./dist/styles/style.css', result.css, function(err) {
-					if (err) reject(err);
-
-					resolve();
-				});
+				resolve(result);
 			});
 		});
+	})
+	.then(function(result) {
+		return new Promise(function(resolve, reject) {
+			fs.writeFile('./dist/styles/style.css', result.css, function(err) {
+				if (err) reject(err);
+
+				resolve();
+			});
+		});
+	});
 });
 
 // webpack is run on the command line because of the nice output it gives there,
