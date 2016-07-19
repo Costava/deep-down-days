@@ -87,7 +87,9 @@ app.audioLoopers.silverAndGold = new AudioLooper({
 	onload: function() {
 		app.audioLoadSuccesses += 1;
 	},
-	onloaderror: function() {
+	onloaderror: function(id, error) {
+		console.log("audio load error.", "ID:", id, "error:", error, "this:", this);
+
 		app.audioLoadFailures += 1;
 	}
 });
@@ -100,7 +102,9 @@ app.audioLoopers.bambooShootsAndLadders = new AudioLooper({
 	onload: function() {
 		app.audioLoadSuccesses += 1;
 	},
-	onloaderror: function() {
+	onloaderror: function(id, error) {
+		console.log("audio load error.", "ID:", id, "error:", error, "this:", this);
+
 		app.audioLoadFailures += 1;
 	}
 });
@@ -197,15 +201,15 @@ app.turnOffNightmareMode();
 app.useLoadingColorA = true;
 app.loadingColorA = 'rgb(10, 240, 40)';
 app.loadingColorB = 'rgb(10, 40, 240)';
-app.loadingTextElement = document.querySelector('.js-loading-text');
+app.loadingInfoElement = document.querySelector('.js-loading-info');
 app.loadingMenuWork = function() {
 	if (this.audioLoadFailures > 0) {
 		// Failure
 
-		this.loadingTextElement.innerHTML = "Failed to load audio.";
+		this.loadingInfoElement.innerHTML = "Failed to load audio.";
 
 		app.loadingMenuLoop.stopCallback = function() {
-			console.log("Failed to load audio.");
+			console.log("Failed to load audio. Loading loop stopped.");
 		};
 
 		app.loadingMenuLoop.stop();
@@ -225,10 +229,10 @@ app.loadingMenuWork = function() {
 		// Keep waiting
 
 		if (this.useLoadingColorA) {
-			this.loadingTextElement.style.color = this.loadingColorA;
+			this.loadingInfoElement.style.color = this.loadingColorA;
 		}
 		else {
-			this.loadingTextElement.style.color = this.loadingColorB;
+			this.loadingInfoElement.style.color = this.loadingColorB;
 		}
 
 		this.useLoadingColorA = !this.useLoadingColorA;
