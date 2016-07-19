@@ -19,6 +19,7 @@
     "webpack": "^1.12.13"
   },
   "dependencies": {
+    "howler": "^2.0.0",
     "spark-md5": "^2.0.0"
   }
 }

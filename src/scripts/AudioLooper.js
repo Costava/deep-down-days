@@ -1,3 +1,5 @@
+import 'howler';
+
 /**
  * @param {object} o
  * - @property {array} urls - array of string paths to audio file

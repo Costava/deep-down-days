@@ -18,8 +18,8 @@ gulp.task('clear-build', ['delete-build'], function(cb) {
 	});
 });
 
-gulp.task('dev-tasks',        ['move-html', 'move-howler', 'move-audio', 'build-css', 'build-js']);
-gulp.task('production-tasks', ['move-html', 'move-howler', 'move-audio', 'build-css', 'build-js-production']);
+gulp.task('dev-tasks',        ['move-html', 'move-audio', 'build-css', 'build-js']);
+gulp.task('production-tasks', ['move-html', 'move-audio', 'build-css', 'build-js-production']);
 
 //////////
 
@@ -30,13 +30,6 @@ gulp.task('delete-build', function() {
 gulp.task('move-html', function() {
 	var stream = gulp.src(['./src/index.html'])
 		.pipe(gulp.dest('./dist'));
-
-	return stream;
-});
-
-gulp.task('move-howler', function() {
-	var stream = gulp.src(['./src/scripts/howler.min.js'])
-		.pipe(gulp.dest('./dist/scripts'));
 
 	return stream;
 });
