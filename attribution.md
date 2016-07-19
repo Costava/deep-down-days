@@ -14,16 +14,17 @@
 
 ---
 
-- File(s): `howler.min.js`  
+- `howler`  
 - Author: [James Simpson](https://github.com/goldfire), [various contributors](https://github.com/goldfire/howler.js/graphs/contributors)  
-- Source: https://github.com/goldfire/howler.js  
-- License: [MIT License](https://github.com/goldfire/howler.js/blob/master/LICENSE.md)  
-- Notes: Version 2.0.0-rc2
+- npm source: https://www.npmjs.com/package/howler  
+- GitHub source: https://github.com/goldfire/howler.js  
+- License: [MIT License](http://spdx.org/licenses/MIT)  
+- Notes: None
 
 ---
 
 - `spark-md5`  
-- Author: [André Cruz](https://www.npmjs.com/~satazor), [various contributors](https://github.com/satazor/js-spark-md5/graphs/contributors)  
+- Author: [André Cruz](https://github.com/satazor), [various contributors](https://github.com/satazor/js-spark-md5/graphs/contributors)  
 - npm source: https://www.npmjs.com/package/spark-md5  
 - GitHub source: https://github.com/satazor/js-spark-md5  
 - License: [Do What The F*ck You Want To Public License](http://spdx.org/licenses/WTFPL)  
