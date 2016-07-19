@@ -23,7 +23,7 @@
 ---
 
 - `spark-md5`  
-- Author: [André Cruz](https://www.npmjs.com/~satazor)  
+- Author: [André Cruz](https://www.npmjs.com/~satazor), [various contributors](https://github.com/satazor/js-spark-md5/graphs/contributors)  
 - npm source: https://www.npmjs.com/package/spark-md5  
 - GitHub source: https://github.com/satazor/js-spark-md5  
 - License: [Do What The F*ck You Want To Public License](http://spdx.org/licenses/WTFPL)  
