@@ -44,8 +44,6 @@ app.game.dieLoop.stopCallback = function() {
 	// Save canvas to image
 	// `createImageBitmap` returns a promise
 	createImageBitmap(app.game.c).then(function(image) {
-		// console.log("image:", image);
-
 		app.game.finalFrame = image;
 
 		app.menus.end.show();
@@ -336,8 +334,6 @@ app.menus.loading = new Menu(
 	}
 );
 
-// console.log(document.querySelector('.js-nightmare-wrapper'));
-
 app.menus.main = new Menu(
 	'main',
 	document.querySelector('.js-main-menu'),
@@ -523,8 +519,6 @@ app.hideInstructions = function() {
 
 app.startInstructions = function() {
 	this.showInstructions();
-
-	// console.log("this.instructionsHideTimeout:", this.instructionsHideTimeout);
 
 	if (this.instructionsHideTimeout != undefined) {
 		clearTimeout(this.instructionsHideTimeout);
