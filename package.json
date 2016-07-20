@@ -1,6 +1,6 @@
 {
   "name": "deep-down-days",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-dev": "gulp clear-build && gulp dev-tasks",
