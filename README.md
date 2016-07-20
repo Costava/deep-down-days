@@ -1,6 +1,12 @@
 # Deep Down Days
 
-[Play online](https://costava.github.io/deep-down-days/dist/)
+## Controls
+
+- Move: `←` `→`
+- Jump: `Z`, `↑`, `Space`
+- Hold to Sprint: `Shift`
+
+## [Play online](https://costava.github.io/deep-down-days/dist/)
 
 ![Deep Down Days](http://i.imgur.com/43bXTDn.gif)
 
