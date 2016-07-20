@@ -206,7 +206,11 @@ app.loadingMenuWork = function() {
 	if (this.audioLoadFailures > 0) {
 		// Failure
 
-		this.loadingInfoElement.innerHTML = "Failed to load audio.";
+		this.loadingInfoElement.style.color = '#fff';
+		this.loadingInfoElement.innerHTML = `<div>Failed to load audio.</div>
+		<div>Refresh or try another browser.</div>
+		<br>
+		<div><a href="https://github.com/Costava/deep-down-days" target="_blank">View source on GitHub</a>.</div>`;
 
 		app.loadingMenuLoop.stopCallback = function() {
 			console.log("Failed to load audio. Loading loop stopped.");
