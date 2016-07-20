@@ -2,6 +2,8 @@
 
 [Play online](https://costava.github.io/deep-down-days/dist/)
 
+![Deep Down Days](http://i.imgur.com/43bXTDn.gif)
+
 ## Attribution
 
 - [Daniela Salvia](https://soundcloud.com/danielasalvia): main menu music  
