@@ -488,7 +488,7 @@ Game.prototype.gameWork = function() {
 
 			this.ctx.translate(this.c.width / 2, this.c.height / 2);
 			this.ctx.rotate((Math.PI / 32) * Math.sin(timeVar / 1200));
-			var scale = 0.6 + 0.2 * Math.cos(timeVar / 600);
+			var scale = 0.65 + 0.25 * Math.cos(timeVar / 600);
 			this.ctx.scale(scale, scale);
 			this.ctx.translate(-this.c.width / 2, -this.c.height / 2);
 
