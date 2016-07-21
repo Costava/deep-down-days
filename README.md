@@ -1,5 +1,9 @@
 # Deep Down Days
 
+Endless cave running. JavaScript, HTML, and CSS game.
+
+Performance may be poor in Firefox unless the window resolution is low.
+
 ## Controls
 
 - Move: `←` `→`
